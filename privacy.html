@@ -13,13 +13,13 @@
 <a class="skip" href="#main">Skip to content</a>
 <header>
 <a class="brand" href="./"><span aria-hidden="true">✦</span>LITTLE FORGE GAMES</a>
-<nav aria-label="Main navigation"><a href="./#support">Support</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+<nav aria-label="Main navigation"><a href="./#support">Support</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
 </header>
 <main id="main">
 <div class="eyebrow">Emberwake Idle · Little Forge Games</div>
 <h1 class="policy-title">Privacy Policy</h1>
 <p class="meta">Last updated: <time datetime="2026-11-06">6 November 2026</time></p>
-<p class="lead">How gameplay saves, purchases, subscription verification, advertising, and support information are handled.</p>
+<p class="lead">How gameplay saves, purchases, subscription verification, advertising, optional reviewer access, and support information are handled.</p>
 <div class="summary" aria-label="Privacy overview"><ul>
 <li>Your gameplay save stays on your device, subject to Android system backup settings.</li>
 <li>Google Play handles payments. Subscription tokens are sent to our Google Cloud verifier to check access.</li>
@@ -72,6 +72,9 @@
 <p>Google Cloud receives the network request and automatically creates service request logs. These can include your IP address, request time, requested endpoint, response status, request size, latency, and user-agent information. Little Forge Games may access operational logs to diagnose failures, secure the verifier, and prevent abuse. The verifier's HTTPS request body carries the token; the app does not put it in the verifier URL.</p>
 <p>The verifier is deployed in Google Cloud's Finland region (<code>europe-north1</code>). This is its hosting location, not a promise that all related Google processing stays in Finland. Google Play, Google Cloud, and their subprocessors may process information in other locations under the applicable service terms and data-protection arrangements.</p>
 <p>See <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud's Privacy Notice</a> and <a href="https://cloud.google.com/terms/data-processing-addendum">Cloud Data Processing Addendum</a>.</p>
+<h3 id="reviewer-access">Optional reviewer access</h3>
+<p>Authorized reviewers can choose to send a studio-issued shared access code over HTTPS to our Google Cloud service to validate temporary access to Premium and Ad-free. This does not create a player account, purchase or Google Play subscription. The request contains the access code; the response contains the grant type and issue/expiry times. No gameplay save, inventory or player profile is submitted for this purpose.</p>
+<p>The app does not save the code. The server compares it against a configured cryptographic digest; it does not deliberately log or retain the submitted code or request body. The access grant is kept in app memory only, ends when the app process closes or after a maximum of 24 hours, and can be ended using <strong>End reviewer access</strong>. Ordinary earned progress may still be saved. Standard Cloud Run connection metadata and logs described above still apply. The purpose is app functionality and authorized testing, based on our legitimate interest in reviewing and maintaining the game.</p>
 </section>
 <section id="cancellation">
 <h2>5. Cancellation, refunds and local deletion</h2>
